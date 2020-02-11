@@ -96,16 +96,16 @@ class ModuleBase {
     _onIOConnect(socket) {
         trace("io connect", this._name);
         this._clients.set(socket.id, socket);
-        socket.on("disconnect", this._onIODisconnect.bind(this));
+        socket.on("disconnect", this._onIODisconnect.bind(this, socket.id));
     }
 
     /**
      * 
-     * @param {Socket} socket : 
+     * @param {String} socket : 
      */
-    _onIODisconnect(socket) {
+    _onIODisconnect(socketID) {
         trace("io disconnect", this._name);
-        this._clients.delete(socket.id);
+        this._clients.delete(socketID);
     }
 
     /**
