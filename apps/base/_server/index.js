@@ -12,7 +12,7 @@ class Base extends ModuleBase {
 	 * @param {*} res 
 	 * @param  {...*} params : some arguments
 	 */
-	hello(req, res, ... params) {
+	hello(req, res, ...params) {
 		let answer = ["hello", ...params, "!"].join(" "); // say hello
 		trace(answer); // say it
 		this.sendJSON(req, res, 200, {message: answer}); // answer JSON

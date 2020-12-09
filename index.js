@@ -20,7 +20,7 @@ global.trace = (...args) => { // better console.log
 global.die = () => {}; // empty method to die
 global.error = err => console.log("\x1b[31m" + err, "\x1b[0m"); // print scary red error message
 
-const appName = "base";
+const appName = "base"; // <<<<< APP DIRECTORY NAME
 const appPath = path.join(__dirname, "apps", appName); // get app path from name
 const App = require(path.join(appPath, "_server")); // load app module
 
