@@ -11,6 +11,6 @@
   "dependencies": {
     "connect": "^3.7.0",
     "mime-types": "^2.1.27",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
